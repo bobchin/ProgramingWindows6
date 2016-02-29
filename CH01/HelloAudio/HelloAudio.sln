@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloAudio", "HelloAudio\HelloAudio.csproj", "{6DEB32F8-AAC9-4605-BFC2-46D900ED251E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DEB32F8-AAC9-4605-BFC2-46D900ED251E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DEB32F8-AAC9-4605-BFC2-46D900ED251E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DEB32F8-AAC9-4605-BFC2-46D900ED251E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DEB32F8-AAC9-4605-BFC2-46D900ED251E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
