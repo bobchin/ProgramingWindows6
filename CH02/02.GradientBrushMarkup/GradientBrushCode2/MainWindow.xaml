@@ -1,0 +1,59 @@
+﻿<Window x:Class="GradientBrushCode2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GradientBrushCode2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
+    <Grid Name="contentGrid">
+        <!--
+        <TextBlock x:Name="textBlock" Text="Hello, Windows8!" FontSize="96">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="Blue"/>
+                <SolidColorBrush>
+                    <SolidColorBrush.Color>
+                        Blue
+                    </SolidColorBrush.Color>
+                </SolidColorBrush>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStopCollection>
+                            <GradientStop Offset="0" Color="Blue"/>
+                            <GradientStop Offset="1" Color="Red"/>
+                        </GradientStopCollection>
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+                LinearGradientBrushのコンテントプロパティGradientStopsなので省略できる
+                上と同じ意味になる
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                    <GradientStop Offset="0" Color="Blue"/>
+                    <GradientStop Offset="1" Color="Red"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        -->
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0, 1" EndPoint="1, 0">
+                <GradientStop Offset="0" Color="Red" />
+                <GradientStop Offset="1" Color="Blue" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <TextBlock Name="txtblk" 
+                   Text="Hello, Windows8!"
+                   FontSize="96"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   >
+            <TextBlock.Foreground>
+                <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 0">
+                    <GradientStop Offset="0" Color="Blue"/>
+                    <GradientStop Offset="1" Color="Red"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+    </Grid>
+</Window>
