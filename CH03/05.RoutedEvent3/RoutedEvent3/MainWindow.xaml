@@ -1,0 +1,61 @@
+﻿<Window x:Class="RoutedEvent3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RoutedEvent3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        WindowState="Maximized"
+        FontSize="48">
+    <!-- 
+    ここでBackgroundを指定しないと背景色が変わらない。
+    指定しない場合は、Background="{x:Null}" を指定したこととなり、不可視になってしまう。
+    -->
+    <Grid Background="White">
+        <TextBlock 
+            Text="Left/Top"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"/>
+
+        <TextBlock 
+            Text="Center/Top"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"/>
+
+        <TextBlock 
+            Text="Right/Top"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"/>
+
+        <TextBlock 
+            Text="Left/Center"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"/>
+
+        <TextBlock 
+            Text="Center/Center"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+
+        <TextBlock 
+            Text="Right/Center"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"/>
+
+        <TextBlock 
+            Text="Left/Bottom"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"/>
+
+        <TextBlock 
+            Text="Center/Bottom"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"/>
+
+        <TextBlock 
+            Text="Right/Bottom"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
