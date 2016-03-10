@@ -1,0 +1,36 @@
+﻿<Window x:Class="BetterBorderedText.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BetterBorderedText"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
+    <Grid>
+        <Border
+            BorderBrush="Red"
+            BorderThickness="12"
+            CornerRadius="24"
+            Background="Yellow"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+
+            <!--
+            Marginは基準点がPanelなどの親要素になる。
+            左上（x, y）からの距離（x1, y1） => x1: 左マージン y1: 上マージン
+            右下（x, y）からの距離（x2, y2） => x2: 右マージン y2: 下マージン
+            指定する。
+
+            Paddingは基準点が自身になる。
+            左上（x, y）からの距離（x1, y1） => x1: 左マージン y1: 上マージン
+            右下（x, y）からの距離（x2, y2） => x2: 右マージン y2: 下マージン
+            指定する。
+            -->
+            <TextBlock
+                Text="Hello, World8!"
+                FontSize="96"
+                Foreground="Blue"
+                Margin="24"/>
+        </Border>
+    </Grid>
+</Window>
