@@ -1,0 +1,25 @@
+﻿<Window x:Class="SimpleEllipse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleEllipse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" WindowState="Maximized">
+    <Grid>
+        <!--
+        HorizontalAlignment, VerticalAlignment は指定すると形がつぶれてしまう。
+        Width, Heightで指定する必要がある
+        
+        Stretch=Uniform       は親要素の縦と横で小さい方のサイズに直径を合わせる
+        Stretch=UniformToFill は親要素の縦と横で大きい方のサイズに直径を合わせる
+        -->
+        <Ellipse 
+            Stroke="Red"
+            StrokeThickness="24"
+            Fill="Blue" 
+            Stretch="UniformToFill"
+            VerticalAlignment="Bottom"
+            />
+    </Grid>
+</Window>
