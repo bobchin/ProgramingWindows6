@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 14 for Windows Desktop
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorWrap", "ColorWrap\ColorWrap.csproj", "{1F57CC34-B0FD-4E6B-B35C-629D1D3A29C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetzoldWindows8Controls", "..\14.ColorList3\PetzoldWindows8Controls\PetzoldWindows8Controls.csproj", "{A2AD083D-FB1D-4949-B27C-4855E20BEB1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F57CC34-B0FD-4E6B-B35C-629D1D3A29C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F57CC34-B0FD-4E6B-B35C-629D1D3A29C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F57CC34-B0FD-4E6B-B35C-629D1D3A29C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F57CC34-B0FD-4E6B-B35C-629D1D3A29C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2AD083D-FB1D-4949-B27C-4855E20BEB1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2AD083D-FB1D-4949-B27C-4855E20BEB1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2AD083D-FB1D-4949-B27C-4855E20BEB1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2AD083D-FB1D-4949-B27C-4855E20BEB1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
