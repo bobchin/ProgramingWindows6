@@ -1,0 +1,56 @@
+﻿<Window x:Class="ButtonVarieties.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ButtonVarieties"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <Button Content="Just a plain old Button" Width="150" HorizontalAlignment="Left"/>
+            <Button 
+                Content="Just a plain old Button"
+                Background="Yellow"
+                BorderBrush="Red"
+                BorderThickness="12"
+                Foreground="Blue"
+                FontSize="48"
+                FontStyle="Italic"/>
+            <Button>
+                <StackPanel>
+                    <Image Source="http://www.charlespetzold.com/pw6/PetzoldJersey.jpg" Width="100" />
+                    <TextBlock Text="Figure 1" HorizontalAlignment="Center" />
+                </StackPanel>
+            </Button>
+            <!-- WPF にはない
+            <HyperlinkButton Content="HyperlinkButton" />
+            -->
+            <TextBlock>
+                <Hyperlink>
+                    <Run Text="Hyperlink Text" />
+                </Hyperlink>
+            </TextBlock>
+            <RepeatButton Content="RepeatButton" Width="100" HorizontalAlignment="Left"/>
+            <ToggleButton Content="ToggleButton" Width="100" HorizontalAlignment="Left"/>
+            <CheckBox Content="CheckBox" />
+
+            <RadioButton Content="RadioButton #1" />
+            <RadioButton>RadioButton #2</RadioButton>
+            <RadioButton>
+                <RadioButton.Content>
+                    RadioButton #3
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton>
+                <RadioButton.Content>
+                    <TextBlock Text="RadioButton #4" />
+                </RadioButton.Content>
+            </RadioButton>
+
+            <!-- WPF にはない
+            <ToggleSwitch />
+            -->
+        </StackPanel>
+    </Grid>
+</Window>
