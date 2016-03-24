@@ -121,6 +121,7 @@
             Points="0 0, 500 1000, 1000 0"
             Stroke="Black"
             StrokeThickness="100"
-            Stretch="Fill"/>
+            Stretch="Fill"
+            Margin="24"/>
     </Grid>
 </Window>
