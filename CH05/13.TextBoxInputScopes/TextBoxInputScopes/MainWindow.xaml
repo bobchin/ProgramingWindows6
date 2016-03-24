@@ -1,0 +1,114 @@
+﻿<Window x:Class="TextBoxInputScopes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextBoxInputScopes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525"
+        WindowState="Maximized">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="6" />
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="320" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0 6" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            
+            <!-- Returnキーで複数行モードを開始、折り返しは無効 -->
+            <TextBlock Text="Multiline (accepts Return, no wrap):"
+                Grid.Row="0" Grid.Column="0" />
+            <TextBox Grid.Row="0" Grid.Column="1"
+                AcceptsReturn="True" />
+                     
+            <!-- 折り返しで複数行モードを開始、Returnキーは無効 -->
+            <TextBlock Text="Multiline (ignore Return, wraps):"
+                Grid.Row="1" Grid.Column="0" />
+            <TextBox Grid.Row="1" Grid.Column="1" 
+                TextWrapping="Wrap"/>
+
+            <!-- Returnキーと折り返しによる複数行モード -->
+            <TextBlock Text="Multiline (accepts Return, wraps):"
+                Grid.Row="2" Grid.Column="0" />
+            <TextBox Grid.Row="2" Grid.Column="1"
+                AcceptsReturn="True"
+                TextWrapping="Wrap"/>
+
+            <!-- 既定の入力スコープ -->
+            <TextBlock Text="Default input scope:"
+                Grid.Row="3" Grid.Column="0" />
+            <TextBox Grid.Row="3" Grid.Column="1" 
+                InputScope="Default"/>
+
+            <!-- 電子メール入力スコープ -->
+            <TextBlock Text="Email address input scope:"
+                Grid.Row="4" Grid.Column="0" />
+            <TextBox Grid.Row="4" Grid.Column="1"
+                InputScope="EmailSmtpAddress"/>
+
+            <!-- 数値入力スコープ -->
+            <TextBlock Text="Number input scope:"
+                Grid.Row="5" Grid.Column="0" />
+            <TextBox Grid.Row="5" Grid.Column="1"
+                InputScope="Number"/>
+
+            <!-- 検索入力スコープ -->
+            <!-- WPFではSearchは指定できない
+            <TextBlock Text="Search input scope:"
+                Grid.Row="6" Grid.Column="0" />
+            <TextBox Grid.Row="6" Grid.Column="1"
+                InputScope="Search"/>
+            -->
+            <!-- IMEON, IMEモードを全角(FullShape)ひらがな(Native) -->
+            <TextBlock Text="全角ひらがな:"
+                Grid.Row="6" Grid.Column="0" />
+            <TextBox Grid.Row="6" Grid.Column="1"
+                InputMethod.PreferredImeState="On"
+                InputMethod.PreferredImeConversionMode="FullShape,Native"/>
+
+            <!-- 電話番号入力スコープ -->
+            <TextBlock Text="Telephone number input scope:"
+                Grid.Row="7" Grid.Column="0" />
+            <TextBox Grid.Row="7" Grid.Column="1"
+                InputScope="TelephoneNumber"/>
+
+            <!-- URL入力スコープ -->
+            <TextBlock Text="Url input scope:"
+                Grid.Row="8" Grid.Column="0" />
+            <TextBox Grid.Row="8" Grid.Column="1"
+                InputScope="Url"/>
+
+            <!-- PasswordBox -->
+            <TextBlock Text="PasswordBox:"
+                Grid.Row="9" Grid.Column="0" />
+            <PasswordBox Grid.Row="9" Grid.Column="1" />
+
+        </Grid>
+    </Grid>
+</Window>
