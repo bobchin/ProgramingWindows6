@@ -1,0 +1,11 @@
+﻿<Window x:Class="HowToCancelAsync.MessageDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MessageDialog" Height="180" Width="370"
+        WindowStyle="ToolWindow" ShowInTaskbar="False">
+    <Grid Margin="10">
+        <TextBlock x:Name="message" HorizontalAlignment="Center" Text="メッセージ"/>
+        <StackPanel x:Name="body" Orientation="Horizontal" Margin="0, 30, 0, 0">
+        </StackPanel>
+    </Grid>
+</Window>
