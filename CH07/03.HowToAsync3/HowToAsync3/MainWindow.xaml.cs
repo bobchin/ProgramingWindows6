@@ -26,7 +26,7 @@ namespace HowToAsync3
                 new DialogButton("Green", Colors.Green),
                 new DialogButton("Blue", Colors.Blue),
             };
-            MessageDialog m = new MessageDialog("Choose a color", "How To Async #2", buttons);
+            MessageDialog m = new MessageDialog("Choose a color", "How To Async #3", buttons);
 
             object result = await m.ShowAsync();
             if (result == null)
