@@ -1,0 +1,54 @@
+﻿<Window x:Class="WordFreq.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WordFreq"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="startButton"
+                    Content="Start"
+                    Grid.Row="0" Grid.Column="0"
+                    HorizontalAlignment="Center"
+                    Margin="24 12"
+                    Click="OnStartButtonClick" />
+
+            <Button x:Name="cancleButton"
+                    Content="Cancel"
+                    Grid.Row="0" Grid.Column="2"
+                    IsEnabled="False"
+                    HorizontalAlignment="Center"
+                    Margin="24 12"
+                    Click="OnCancelButtonClick" />
+
+            <ProgressBar x:Name="progressBar"
+                         Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+                         Height="10"
+                         Margin="24" />
+
+            <TextBlock x:Name="errorText"
+                       Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                       FontSize="24"
+                       TextWrapping="Wrap" />
+
+            <ScrollViewer Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
+                <StackPanel x:Name="stackPanel" />
+            </ScrollViewer>
+                       
+        </Grid>
+    </Grid>
+</Window>
