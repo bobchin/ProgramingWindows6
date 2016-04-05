@@ -39,6 +39,7 @@ namespace SegoeSymbols
         private void MainLogic()
         {
             // 34行を作成（実際は17マスを使用する）
+            // 左の最下位行の見出しの作成
             // 最上位はアドレス表示。偶数行: 最下位文字 奇数行: 横仕切り線
             for (int row = 0; row < 34; row++)
             {
@@ -87,7 +88,8 @@ namespace SegoeSymbols
             }
 
             // 34列を作成（実際は17マスを使用する）
-            // 最左位は最下位文字表示。偶数行: フォント文字 奇数行: 縦仕切り線
+            // 上の見出しの作成
+            // 最左位は最下位文字表示。偶数行: アドレス表示 奇数行: 縦仕切り線
             for (int col = 0; col < 34; col++)
             {
                 // 列定義
@@ -118,7 +120,7 @@ namespace SegoeSymbols
                     txtblkColumnHeads[col / 2 - 1] = txtblk;
                 }
 
-                // 奇数列
+                // 奇数列=仕切り線
                 if (col % 2 == 1)
                 {
                     Rectangle rectangle = new Rectangle
@@ -134,6 +136,7 @@ namespace SegoeSymbols
                 }
             }
 
+            // 実際のフォント部分の作成
             for (int col = 0; col < 16; col++)
             {
                 for (int row = 0; row < 16; row++)
@@ -147,6 +150,7 @@ namespace SegoeSymbols
                         VerticalAlignment = VerticalAlignment.Center,
                     };
 
+                    // 偶数行目に入れていく
                     Grid.SetRow(txtblk, 2 * row + 2);
                     Grid.SetColumn(txtblk, 2 * col + 2);
                     characterGrid.Children.Add(txtblk);
@@ -174,6 +178,8 @@ namespace SegoeSymbols
                     }
                     else
                     {
+                        // 0xD800～0xDBFFは上位サロゲート
+                        // 0xDC00～0xDFFFは下位サロゲート
                         code -= 0x10000;
                         int lead = 0xD800 + code / 1024;
                         int trail = 0xDC00 + code % 1024;

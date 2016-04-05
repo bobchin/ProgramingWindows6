@@ -15,6 +15,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <TextBlock x:Name="titleText"
@@ -35,5 +36,17 @@
                 LargeChange="16"
                 AutoToolTipPlacement="BottomRight"
                 ValueChanged="OnSliderValueChanged" />
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <Button Content="&#x1F3B7;"
+                    AutomationProperties.Name="Saxophone" />
+            <Button Content="&#x1F3B8;"
+                    AutomationProperties.Name="Guitar" />
+            <Button Content="&#x1F3B9;"
+                    AutomationProperties.Name="Piano" />
+            <Button Content="&#x1F3BA;"
+                    AutomationProperties.Name="Trumpet" />
+            <Button Content="&#x1F3BB;"
+                    AutomationProperties.Name="Violin" />
+        </StackPanel>
     </Grid>
 </Window>
