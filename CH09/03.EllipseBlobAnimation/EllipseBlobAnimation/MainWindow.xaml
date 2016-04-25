@@ -1,0 +1,33 @@
+﻿<Window x:Class="EllipseBlobAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EllipseBlobAnimation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="700">
+    <Window.Resources>
+        <Storyboard x:Key="storyboard"
+                    RepeatBehavior="Forever"
+                    AutoReverse="True">
+            <DoubleAnimation Storyboard.TargetName="ellipse"
+                             Storyboard.TargetProperty="Width"
+                             From="100" To="600" Duration="0:0:1" />
+            <DoubleAnimation Storyboard.TargetName="ellipse"
+                             Storyboard.TargetProperty="Height"
+                             From="600" To="100" Duration="0:0:1" />
+        </Storyboard>
+    </Window.Resources>
+    
+    <Grid>
+        <Ellipse x:Name="ellipse">
+            <Ellipse.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Offset="0" Color="Pink" />
+                    <GradientStop Offset="1" Color="LightBlue" />
+                </LinearGradientBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+    </Grid>
+</Window>
