@@ -1,0 +1,33 @@
+﻿<Window x:Class="RainbowAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RainbowAnimation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush x:Name="brush" />
+        </Grid.Background>
+   </Grid>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever">
+                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="brush"
+                                                  Storyboard.TargetProperty="Color">
+                        <DiscreteColorKeyFrame KeyTime="0:0:0" Value="#FF0000" />
+                        <LinearColorKeyFrame KeyTime="0:0:1" Value="#FFFF00" />
+                        <LinearColorKeyFrame KeyTime="0:0:2" Value="#00FF00" />
+                        <LinearColorKeyFrame KeyTime="0:0:3" Value="#00FFFF" />
+                        <LinearColorKeyFrame KeyTime="0:0:4" Value="#FFFF00" />
+                        <LinearColorKeyFrame KeyTime="0:0:5" Value="#FF00FF" />
+                        <LinearColorKeyFrame KeyTime="0:0:6" Value="#FF0000" />
+                    </ColorAnimationUsingKeyFrames>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+</Window>
