@@ -1,0 +1,60 @@
+﻿<Window x:Class="FastNotFluid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FastNotFluid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Grid Background="Gray">
+        <Canvas SizeChanged="OnCanvasSizeChanged"
+                Margin="0 0 96 96">
+            <Ellipse x:Name="ellipse"
+                     Width="96"
+                     Height="96"
+                     Fill="Black" />
+        </Canvas>
+    </Grid>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard x:Name="animation">
+                    <DoubleAnimation x:Name="horzAnima"
+                                     Storyboard.TargetName="ellipse"
+                                     Storyboard.TargetProperty="(Canvas.Left)"
+                                     From="0" Duration="0:0:2.51"
+                                     AutoReverse="True"
+                                     RepeatBehavior="Forever" />
+
+                    <DoubleAnimation x:Name="vertAnima"
+                                     Storyboard.TargetName="ellipse"
+                                     Storyboard.TargetProperty="(Canvas.Top)"
+                                     From="0" Duration="0:0:1.01"
+                                     AutoReverse="True"
+                                     RepeatBehavior="Forever" />
+
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ellipse"
+                                                   Storyboard.TargetProperty="(UIElement.Visibility)"
+                                                   RepeatBehavior="Forever">
+                        <DiscreteObjectKeyFrame KeyTime="0:0:0" Value="{x:Static Visibility.Visible}" />
+                        <DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}" />
+                        <DiscreteObjectKeyFrame KeyTime="0:0:0.25" Value="{x:Static Visibility.Visible}" />
+                        <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Collapsed}" />
+                        <DiscreteObjectKeyFrame KeyTime="0:0:0.45" Value="{x:Static Visibility.Visible}" />
+                    </ObjectAnimationUsingKeyFrames>
+
+                    <ColorAnimationUsingKeyFrames Storyboard.TargetName="ellipse"
+                                                  Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                  RepeatBehavior="Forever">
+                        <EasingColorKeyFrame KeyTime="0:0:0" Value="Black" />
+                        <EasingColorKeyFrame KeyTime="0:0:0.2" Value="White" />
+                        <EasingColorKeyFrame KeyTime="0:0:0.4" Value="Black" />
+                        <EasingColorKeyFrame KeyTime="0:0:0.6" Value="Black" />
+                    </ColorAnimationUsingKeyFrames>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+</Window>
