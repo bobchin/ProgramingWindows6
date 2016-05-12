@@ -1,0 +1,53 @@
+﻿<Window x:Class="ListBoxWithItemTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListBoxWithItemTemplate"
+        xmlns:ch11="clr-namespace:Petzold.ProgrammingWindows6.Chapter11;assembly=Petzold.ProgrammingWindows6.Chapter11"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <ch11:NamedColor x:Key="namedColor" />
+    </Window.Resources>
+
+    <Grid>
+        <ListBox x:Name="listbox"
+                 ItemsSource="{Binding Source={StaticResource namedColor}, Path=All}"
+                 Width="380">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="{Binding RelativeSource={RelativeSource TemplatedParent},
+                                                  Path=Foreground}"
+                            BorderThickness="1"
+                            Width="336"
+                            Margin="6"
+                            Loaded="OnItemLoaded">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Rectangle Grid.Column="0"
+                                       Height="72"
+                                       Width="72"
+                                       Margin="6">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding Color}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <TextBlock Grid.Column="1"
+                                       FontSize="24"
+                                       Text="{Binding Name}"
+                                       VerticalAlignment="Center" />
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Grid.Background>
+            <SolidColorBrush Color="{Binding ElementName=listbox, Path=SelectedItem.Color}" />
+        </Grid.Background>
+    </Grid>
+</Window>
