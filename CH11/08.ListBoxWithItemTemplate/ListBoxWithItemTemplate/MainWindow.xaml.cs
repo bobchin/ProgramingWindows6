@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Petzold.ProgrammingWindows6.Chapter11;
 
 namespace ListBoxWithItemTemplate
 {
@@ -27,7 +28,8 @@ namespace ListBoxWithItemTemplate
 
         private void OnItemLoaded(object sender, RoutedEventArgs e)
         {
-
+            System.Diagnostics.Debug.WriteLine("Item Loaded: " +
+                ((sender as FrameworkElement).DataContext as NamedColor).Name);
         }
     }
 }
