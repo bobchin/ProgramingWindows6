@@ -1,0 +1,7 @@
+1.ClockRack
+  Change TextBlockStyle, Flyout
+
+2.SpinPaint
+  Change ApplicationView.Value
+
+

@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="SimpleContextMenu.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleContextMenu"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Name="textBlock"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   RightTapped="textBlock_RightTapped"
+                   >
+            <Flyout.AttachedFlyout>
+                <MenuFlyout x:Name="menuFlyout" Placement="Bottom" >
+                    <MenuFlyoutItem x:Name="menuLarger" Text="Larger Font" />
+                    <MenuFlyoutItem x:Name="menuSmaller" Text="Smaller Font" />
+                    <MenuFlyoutSeparator />
+                    <MenuFlyoutItem x:Name="menuRed" Text="Red" />
+                    <MenuFlyoutItem x:Name="menuGreen" Text="Green"  />
+                    <MenuFlyoutItem x:Name="menuBlue" Text="Blue"  />
+                </MenuFlyout>
+            </Flyout.AttachedFlyout>
+            Simple Context Menu            
+            <LineBreak />
+            <LineBreak />
+            (right-click or press-and-hold-and-release to invoke)
+        </TextBlock>
+        <!--  
+            <LineBreak />
+            <LineBreak />
+            (right-click or press-and-hold-and-release to invoke)
+        -->
+    </Grid>
+</Page>

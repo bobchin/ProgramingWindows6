@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="SimpleContextDailog.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleContextDailog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Name="textBlock"
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextAlignment="Center"
+                   RightTapped="OnTextBlockRighTapped">
+            <Flyout.AttachedFlyout>
+                <Flyout x:Name="flyout" Placement="Full"  >
+                    <Border Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                            BorderBrush="{StaticResource ApplicationForegroundThemeBrush}"
+                            BorderThickness="1" Padding="24" 
+                            >
+                        <StackPanel>
+                            <Button x:Name="btn1" Content="Larger Font"
+                                    HorizontalAlignment="Center"
+                                    Margin="12" Click="OnButtonClick" />
+                            <Button x:Name="btn2" Content="Smaller Font"
+                                    HorizontalAlignment="Center"
+                                    Margin="12" Click="OnButtonClick" />
+                            <RadioButton x:Name="red" Content="Red"
+                                         Foreground="Red"
+                                         Margin="12"
+                                         Checked="OnRadioButtonChecked" />
+                            <RadioButton x:Name="green" Content="Green"
+                                         Foreground="Green"
+                                         Margin="12"
+                                         Checked="OnRadioButtonChecked" />
+                            <RadioButton x:Name="blue" Content="Blue"
+                                         Foreground="Blue"
+                                         Margin="12"
+                                         Checked="OnRadioButtonChecked" />
+                        </StackPanel>
+                    </Border>
+                </Flyout>
+            </Flyout.AttachedFlyout>
+            Simple Context Dialog
+            <LineBreak />
+            <LineBreak />
+            (right-click or press-hold-and-release to invoke
+        </TextBlock>
+    </Grid>
+</Page>

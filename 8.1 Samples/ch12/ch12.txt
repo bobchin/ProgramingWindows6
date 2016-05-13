@@ -1,0 +1,25 @@
+1.DisplayHighSchoolStudents
+  AppBarButton, ApplicationView, 320px
+
+2.GridApp
+  New Project
+
+3.GroupBySex
+  Change TextBlockStyle
+
+4.HubApp
+  New Project
+
+5.NativeUp
+  DisplayInformation
+
+6.SplitApp
+  New Project
+
+7.WhatRes
+  DisplayInformation
+
+8.WhatSnap
+  ApplicationView, DisplayInformation
+
+

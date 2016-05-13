@@ -1,0 +1,20 @@
+1.AppBarPad
+  CommandBar, Flyout(RequestedTheme)
+
+2.LookAtAppBarButtonStyles
+  Replace Japanese's StandardStyles.xaml
+
+3.SegoeSymbols
+  Change TextBlockStyle
+
+4.SimpleAppBarStyle
+  New Project
+
+5.SimpleContextDialog
+  Flyout
+
+6.SimpleContextMenu
+  MenuFlyout
+
+7.XamlCruncher
+  CommandBar, SettingsFlyout

@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="SimpleAppBarStyle.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SimpleAppBarStyle"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.TopAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="Back" Label="Back" />
+                <AppBarButton Icon="Stop" Label="Stop" />
+                <AppBarButton Icon="Play" Label="Play" />
+                <AppBarButton Icon="Forward" Label="Forward" />
+                <AppBarSeparator />
+                <AppBarToggleButton Icon="Shuffle" Label="Shuffle" />
+                <AppBarButton Icon="Refresh" Label="Refresh" />
+            </CommandBar.SecondaryCommands>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="Home" Label="Home" />
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Icon="Back" Label="Back" />
+                <AppBarButton Icon="Home" Label="Home" />
+                <AppBarButton Icon="Stop" Label="Stop" />
+                <AppBarButton Icon="Play" Label="Play" />
+                <AppBarButton Icon="Forward" Label="Forward" />
+                <AppBarSeparator />
+                <AppBarToggleButton Icon="Shuffle" Label="Shuffle" />
+                <AppBarButton Icon="Refresh" Label="Refresh" />
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+
+    </Grid>
+</Page>

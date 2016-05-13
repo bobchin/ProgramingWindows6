@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="AppBarPad.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AppBarPad"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox Name="txtbox"
+                 IsEnabled="False"
+                 FontSize="24"
+                 AcceptsReturn="True" />
+    </Grid>
+
+    <Page.BottomAppBar>
+        <!-- CommnadBarに変更しました -->
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Icon="FontIncrease" Label="Increase Font"
+                              Click="OnFontIncreaseAppBarButtonClick" />
+                <AppBarButton Icon="FontDecrease" Label="Decrease Font"
+                              Click="OnFontDecreaseAppBarButtonClick" />
+                <AppBarButton Icon="Setting" Label="Wrap Option"
+                              Click="OnWrapOptionAppBarButtonClick" />
+            </CommandBar.SecondaryCommands>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="OpenFile" Label="Open File"
+                              Click="OnOpenAppBarButtonClick" />
+                <AppBarButton Icon="Save" Label="Save As"
+                              Click="OnSaveAsAppBarButtonClick" />
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>

@@ -13,24 +13,23 @@
                 VerticalAlignment="Center"
                 BorderBrush="Red"
                 BorderThickness="3">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <!--
-                    <Border BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
-                        <TextBlock Text="temporary" />
-                    </Border>
-                    -->
-                    <Border BorderBrush="{Binding 
-                                RelativeSource={RelativeSource TemplatedParent},
-                                Path=BorderBrush}"
-                            BorderThickness="{Binding
-                                RelativeSource={RelativeSource TemplatedParent},
-                                Path=BorderThickness}" >
-                        <TextBlock Text="temporary" />
-                    </Border>
-                </ControlTemplate>
-            </Button.Template>
+
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="BorderBrush" Value="Red" />
+                    <Setter Property="BorderThickness" Value="3" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                    <TextBlock Text="temporary" />
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
         </Button>
     </Grid>
 </Window>

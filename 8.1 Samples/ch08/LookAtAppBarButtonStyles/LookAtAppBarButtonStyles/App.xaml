@@ -1,0 +1,21 @@
+﻿<Application
+    x:Class="LookAtAppBarButtonStyles.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LookAtAppBarButtonStyles"
+    RequestedTheme="Light">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+
+                <!-- 
+                    StandardStyles.xamlはVisual Studio 2013 Previewでは提供されなくなりました。
+                    以下のStandardStyles.xamlは、Visual Studio 2012より流用しました
+                 -->
+                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

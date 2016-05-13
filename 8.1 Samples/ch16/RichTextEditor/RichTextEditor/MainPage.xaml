@@ -1,0 +1,95 @@
+﻿<Page
+    x:Class="RichTextEditor.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RichTextEditor"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+
+        <RichEditBox Name="richEditBox" />
+
+    </Grid>
+
+    <Page.TopAppBar>
+        <AppBar Opened="OnTopAppBarOpened">
+            <Grid>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Left">
+                    <!-- For CheckBox's, need to comment out BackgroundCheckedGlyph in 
+                         AppBarButtonStyle in StandardStyles.xaml -->
+                    <AppBarToggleButton x:Name="boldAppBarCheckBox" Label="Bold"
+                                        Icon="Bold" 
+                                        Checked="OnBoldAppBarCheckBoxChecked"
+                                        Unchecked="OnBoldAppBarCheckBoxChecked"/>
+                    <AppBarToggleButton x:Name="italicAppBarCheckBox" Label="Italic"
+                                        Icon="Italic"
+                                        Checked="OnItalicAppBarCheckBoxChecked"
+                                        Unchecked="OnItalicAppBarCheckBoxChecked"/>
+                    <AppBarToggleButton x:Name="underlineAppBarCheckBox" Label="Underline"
+                                        Icon="Underline"
+                                        Checked="OnUnderlineAppBarCheckBoxChecked"
+                                        Unchecked="OnUnderlineAppBarCheckBoxChecked"/>
+
+                    <ComboBox Name="fontSizeComboBox"
+                              Width="72"
+                              Margin="12 12 24 36"
+                              SelectionChanged="OnFontSizeComboBoxSelectionChanged">
+                        <x:Int32>8</x:Int32>
+                        <x:Int32>9</x:Int32>
+                        <x:Int32>10</x:Int32>
+                        <x:Int32>11</x:Int32>
+                        <x:Int32>12</x:Int32>
+                        <x:Int32>14</x:Int32>
+                        <x:Int32>16</x:Int32>
+                        <x:Int32>18</x:Int32>
+                        <x:Int32>20</x:Int32>
+                        <x:Int32>22</x:Int32>
+                        <x:Int32>24</x:Int32>
+                        <x:Int32>26</x:Int32>
+                        <x:Int32>28</x:Int32>
+                        <x:Int32>36</x:Int32>
+                        <x:Int32>48</x:Int32>
+                        <x:Int32>72</x:Int32>
+                    </ComboBox>
+
+                    <ComboBox Name="fontFamilyComboBox" 
+                              Width="240"
+                              Margin="12 12 24 36"
+                              SelectionChanged="OnFontFamilyComboBoxSelectionChanged" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Right">
+
+                    <StackPanel Name="alignmentPanel"
+                                Orientation="Horizontal">
+                        <!-- 元々はRadioButton -->
+                        <AppBarToggleButton x:Name="alignLeftAppBarRadioButton" 
+                                            Label="Align Left" Icon="AlignLeft"
+                                            Checked="OnAlignAppBarRadioButtonChecked"/>
+                        <AppBarToggleButton x:Name="alignCenterAppBarRadioButton" 
+                                            Label="Align Center" Icon="AlignCenter"
+                                            Checked="OnAlignAppBarRadioButtonChecked"/>
+                        <AppBarToggleButton x:Name="alignRightAppBarRadioButton" 
+                                            Label="Align Right" Icon="AlignRight"
+                                            Checked="OnAlignAppBarRadioButtonChecked" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </AppBar>
+    </Page.TopAppBar>
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands></CommandBar.SecondaryCommands>
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Icon="OpenFile" Label="Open File"
+                                  Click="OnOpenAppBarButtonClick" />
+                <AppBarButton Icon="Save" Label="Save As"
+                                  Click="OnSaveAsAppBarButtonClick" />
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>
