@@ -1,0 +1,36 @@
+﻿<Window x:Class="BasicControlTemplate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BasicControlTemplate"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Content="Click me!"
+                Click="OnButtonCloick"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                BorderBrush="Red"
+                BorderThickness="3">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <!--
+                    <Border BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <TextBlock Text="temporary" />
+                    </Border>
+                    -->
+                    <Border BorderBrush="{Binding 
+                                RelativeSource={RelativeSource TemplatedParent},
+                                Path=BorderBrush}"
+                            BorderThickness="{Binding
+                                RelativeSource={RelativeSource TemplatedParent},
+                                Path=BorderThickness}" >
+                        <TextBlock Text="temporary" />
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
