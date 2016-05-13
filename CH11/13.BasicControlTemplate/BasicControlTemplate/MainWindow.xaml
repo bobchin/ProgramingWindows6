@@ -16,12 +16,16 @@
 
             <Button.Style>
                 <Style TargetType="Button">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="Foreground" Value="Blue" />
                     <Setter Property="BorderBrush" Value="Red" />
                     <Setter Property="BorderThickness" Value="3" />
+                    <Setter Property="FontSize" Value="24" />
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
-                                <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="{TemplateBinding BorderThickness}">
                                     <TextBlock Text="temporary" />
                                 </Border>
