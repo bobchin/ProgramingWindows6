@@ -31,7 +31,9 @@
                                         CornerRadius="12">
                                     <ContentPresenter Content="{TemplateBinding Content}"
                                                       ContentTemplate="{TemplateBinding ContentTemplate}"
-                                                      Margin="{TemplateBinding Margin}"/>
+                                                      Margin="{TemplateBinding Margin}"
+                                                      HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                                                      VerticalAlignment="{TemplateBinding VerticalAlignment}" />
                                 </Border>
                             </ControlTemplate>
                         </Setter.Value>
