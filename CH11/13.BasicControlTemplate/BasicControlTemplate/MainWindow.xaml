@@ -28,7 +28,8 @@
                                         BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="{TemplateBinding BorderThickness}"
                                         CornerRadius="12">
-                                    <TextBlock Text="temporary" />
+                                    <ContentPresenter Content="{TemplateBinding Content}"
+                                                      ContentTemplate="{TemplateBinding ContentTemplate}"/>
                                 </Border>
                             </ControlTemplate>
                         </Setter.Value>
