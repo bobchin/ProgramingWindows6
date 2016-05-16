@@ -12,7 +12,8 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 BorderBrush="Red"
-                BorderThickness="3">
+                BorderThickness="3"
+                Margin="24">
 
             <Button.Style>
                 <Style TargetType="Button">
@@ -29,7 +30,8 @@
                                         BorderThickness="{TemplateBinding BorderThickness}"
                                         CornerRadius="12">
                                     <ContentPresenter Content="{TemplateBinding Content}"
-                                                      ContentTemplate="{TemplateBinding ContentTemplate}"/>
+                                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                      Margin="{TemplateBinding Margin}"/>
                                 </Border>
                             </ControlTemplate>
                         </Setter.Value>
