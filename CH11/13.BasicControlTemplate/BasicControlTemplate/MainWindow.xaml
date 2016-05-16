@@ -24,9 +24,10 @@
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="Button">
-                                <Border Background="{TemplateBinding BorderBrush}"
-                                        BorderBrush="{TemplateBinding Background}"
-                                        BorderThickness="{TemplateBinding BorderThickness}">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="12">
                                     <TextBlock Text="temporary" />
                                 </Border>
                             </ControlTemplate>
