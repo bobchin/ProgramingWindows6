@@ -9,8 +9,8 @@
     <Grid>
         <Button Content="Click me!"
                 Click="OnButtonCloick"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
                 BorderBrush="Red"
                 BorderThickness="3"
                 Margin="24">
